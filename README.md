@@ -1,4 +1,4 @@
-# Tailwind clipboard Landing Page
+# Tailwind Clipboard Landing Page - In work ...
 
 ![cover](./assets/)
 
@@ -14,9 +14,9 @@ Includes:
 - part with some items with icons and part with some logos using Flexbox
 - footer part
 
-This page a responsive for all devices.
+This page a responsive for all devices. Built with Html and style with Tailwind CSS. 
 
-Built with Html and style with Tailwind CSS.
+The project was created according to the Brad Traversy "Tailwind CSS From Scratch" course.
 
 ## 🦊 Usage
 
