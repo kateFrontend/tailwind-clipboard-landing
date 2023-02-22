@@ -1,92 +1,56 @@
-# Tailwind CSS Simple Starter
+# Tailwind clipboard Landing Page
 
-![cover](./assets/tailwind.png)
+![cover](./assets/)
 
-Tailwind is a CSS framework that provides us with single-purpose utility classes which are opinionated for the most part, and which help us design our web pages from right inside our markup or .js
 
-Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
+## 🦉 Main Information
 
-It's fast, flexible, and reliable — with zero-runtime.
+This is a landing page for an app called Clipboard.
 
-This is a simple setup to develop Tailwind projects, which will be used for Tailwind projects.
+Includes:
+- top hero part with a background image which is a separate image for mobile version
+- logo with butoons to download the app
+- part with some text and images
+- part with some items with icons and part with some logos using Flexbox
+- footer part
 
-## 🦉 Official source
+This page a responsive for all devices.
 
-```
-https://tailwindcss.com/
-```
+Built with Html and style with Tailwind CSS.
 
 ## 🦊 Usage
 
-Open your terminal and install Tailwind CSS (you do need Node.js installed).
+Copy 'tailwind-simple-starter' and rename it.
 
-Create a package.json
-
-```
-npm init -y
-```
-
-Install Tailwind and dependencies with npm
+Make a screen sizes, color and font configurations in 'tailwind.config.js' and then run it 
 
 ```
-npm install -D tailwindcss
-```
-
-Create a config file
-
-```
-npx tailwindcss init
-```
-
-Configure your template paths
-
-```
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ['./*.html'],
   theme: {
-    extend: {},
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
+    extend: {
+      colors: {
+        strongCyan: 'hsl(171, 66%, 44%)',
+        lightBlue: 'hsl(233, 100%, 69%)',
+        darkGrayishBlue: 'hsl(210, 10%, 33%)',
+        grayishBlue: 'hsl(201, 11%, 66%)',
+      },
+      fontFamily: {
+        sans: ['Bai Jamjuree', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
 ```
 
-Create an input CSS file (input.css in the root)
-
 ```
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+npm run watch
 ```
 
-Create a npm script to start the Tailwind CLI build process (in package.json file)
-
-```
-  "scripts": {
-    "build": "tailwindcss -i ./input.css -o ./css/style.css",
-    "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch"
-  }
-```
-
-Run build command (it will create a css folder with style.css)
-
-```
-npm run build
-```
-
-Start using Tailwind in your HTML
-
-```
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Simple Tailwind Starter</title>
-</head>
-<body>
-    <h1 class="text-3xl">Simple Tailwind Starter</h1>
-</body>
-</html>
-```
